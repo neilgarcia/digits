@@ -6,7 +6,5 @@ span.d-none 0
     - @digits.each do |d|
       .d-inline.border.border-primary.p-4.m-3 =d
 
-  - if @channel.user_count < 2
-    button#js-roll.d-block.mt-5 Test
-
-
+  - if SubscriberTracker.sub_count(params[:id]) <= 2
+    button#js-roll.d-block.mt-5 Shuffle
