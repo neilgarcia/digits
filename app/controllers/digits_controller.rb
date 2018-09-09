@@ -1,7 +1,4 @@
 class DigitsController < ApplicationController
-  def index
-  end
-
   def generate
     key = SecureRandom.hex[0...5]
 
